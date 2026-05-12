@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            hello, title
+        </title>
+    </head>
+
+<body>
+<form>
+    <input autocomplete="off" autofocus id="name" name="name" placeholder="Name" type="text">
+    <input type="submit">
+</form>
+<script>
+    function greet(event)
+    // as we need to submit it to the server as we have done return false on first to prevent
+    {
+        let name = document.querySelector('#name').value;
+        alert('hello,' + name);
+        // to return false by stylish
+        event.preventDefault();
+    }
+    //<! like register an input like addevent listner >
+    let form = document.querySelector('form');
+    form.addEventListener('submit', greet);
+
+
+
+    // or directly like passing anonymus function like python like lambda function take and argument but no need of name
+
+    //let form = document.querySelector('form');
+//form.addEventListener('submit', function(event) {
+//.alert('hello, .' .+.document.querySelector('#name' ) . value);
+//.event.preventDefault();});
+//  closing sumit and alert )}
+
+
+
+//So the only thing done is deleted the name "greet"
+//and simply calling it "function," and then passing in and specifying
+//the argument it should take.
+//But the next two lines are exactly the same.
+
+
+
+// or even faster by removing let form as professional java scriptor
+
+//document.querySelector('form').addEventListener('submit', function(event) .{
+//.alert('hello, .'+.document. querySelector('#name' ). value);
+//.event.preventDefault(); )};
+
+// lastly if we put this code in head like script in head and form in body as usually it will show message on url and show error when inspect and console as we submit to server
+// it is because the document.addEvent ... becomes null.addEvent.. as it is kept in script which makes no sence  as it follow top to bottom and left to right
+
+
+// so to add script on top we have tp define that like dom..
+//<head>
+//<script>
+
+//document.addEventListener('DOMContentLoaded', function() {
+//document.querySelector('form').addEventListener('submit', function(event) {
+//alert('hello, ' + document.querySelector('#name').value);
+//event.preventDefault();
+// });
+//});
+
+///script>
+//<title>hello</title>
+//</head>
+// <body>
+//<form>
+//<input autocomplete="off" autofocus id="name" name="name" placeholder="Name" type="text">
+//<input type="submit">
+//</form> ...
+// if this have been loaded then only execute the lines go a head and execute document.addEventListener('DOMContentLoaded', function()
+// Well, here too, I've defined an anonymous function
+//in JavaScript, which just allows me to contain,
+//inside of these curly braces, the lines of code that I want to execute, not now,
+//but eventually, when the DOM's content has loaded.
+// or just using script in head <script src="script.js">...
+</script>
+</body>
+</html>
+
